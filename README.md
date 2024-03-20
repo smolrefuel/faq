@@ -13,6 +13,12 @@ It's because you already sent an approval tx before that didn't go through
 
 To solve this, go to metamask settings #### Advanced #### Click on "Clear activity tab data", and afterwards restart the process from the beginning
 
+#### I got the error "execution reverted"
+There are multiple possible reasons for this:
+- The amount of tokens you are trying to swap is too low and doesn't cover the cost of the swap. Solve it by increasing amount
+- Token has a tax or some other mechanism that isn't supported by paraswap. No solution for this, try another token.
+- Token just cant be swapped, eg it was a honeypot... smolrefuel can't do miracles, if your token cant be swapped then we cant swap it either
+
 #### I've been waiting for some time and swap is not going through
 
 Swap can take up to 30 minutes to go through, this is because we are constantly submitting the bundle to flashbots where it competes with other bundles from MEV activity, so it needs to wait for a block with low competition to go through, sometimes that only takes a few minutes and sometimes it takes ####40 minutes.
