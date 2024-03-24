@@ -2,13 +2,13 @@
 #### I got the error "nonce too low"
 It's likely your tx got accepted and your swap has been completed, switch chain to original mainnet and check your wallet!
 
-#### I can't make any txs after switching RPC and approving
-You need to go to metamask settings #### Advanced #### Click on "Clear activity tab data"
+#### I can't make any txs after switching RPC and approving tx
+You need to go to metamask settings > Advanced > Click on "Clear activity tab data"
 
 #### I got the error "nonce too high"
 It's because you already sent an approval tx before that didn't go through
 
-To solve this, go to metamask settings #### Advanced #### Click on "Clear activity tab data", and afterwards restart the process from the beginning
+To solve this, go to metamask settings > Advanced > Click on "Clear activity tab data", and afterwards restart the process from the beginning
 
 #### I got the error "execution reverted"
 There are multiple possible reasons for this:
@@ -28,6 +28,14 @@ It's because the base gas fee has increased since you signed your approval tx. T
 
 #### Metamask shows me warnings when changing RPC
 These are normal, just make sure not to sign any weird txs after switching RPC and you'll be fine. SmolRefuel only requests an approval tx where you can verify the total amount approved, which should be the same amount you've inputted.
+
+#### 10 ETH appeared in my wallet, where do they come from?
+Our RPC simulates a balance of 10 ETH so that your wallet will allow you to sign transactions (otherwise it wouldn't allow you because your balance is too low to cover gas). The 10 ETH that you see is thus fake and will disappear as soon as you switch RPCs.
+
+#### I got stuck
+You need to do this:
+1. Reset your state by going to metamask settings > Advanced > Click on "Clear activity tab data"
+2. Refresh the page and restart the process again to do the swap
 
 #### Why is fee so high?
 We need to send 3 txs:
